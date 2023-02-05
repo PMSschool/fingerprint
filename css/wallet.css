@@ -1,0 +1,254 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html{
+scroll-behavior: smooth;
+}
+
+
+:root{
+    --section-padding: 60px;
+    --first-color:#994f0f;
+    --second-color:#f6f6f6;
+    --third-color:#994f0f66;
+    --font-family: "cairo" , arial;
+    --font-family1: "work-sans" , arial;
+}
+
+body{
+    font-family: "cairo" ,sans-serif;
+}
+
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+@media (min-width: 768px){
+    .container{
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px){
+    .container{
+        width: 1170px;
+    }
+}
+
+/* start header */
+.header{
+    position:relative;
+    left: 0;
+    width: 100%;
+    z-index: 11111111;
+    background-color: rgb(0 , 0, 0, 80%);
+    position: fixed;
+    top: 0px;
+}
+
+.header .container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 70px;
+}
+
+.header .container .logo img {
+    width: 216px;
+}
+
+.header .container nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.header .container nav .toggle-menu{
+    color: var(--first-color);
+    font-size: 24px;
+}
+
+@media (min-width:768px){
+    .header .container nav .toggle-menu{
+        display: none;
+    }
+}
+
+.header .container nav ul{
+    display: flex;
+    list-style: none;
+}
+
+@media (max-width: 767px) {
+    .header .container nav ul {
+        display: none;
+    }
+    .header .container nav .toggle-menu:hover + ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 66%;
+        left: 0;
+        width: 100%;
+        background-color: rgb(0 0 0 / 80%);
+    }
+    .header .container nav ul li a {
+        padding: 15px !important;
+    }
+}
+
+.header .container nav .product .pro{
+    display: none;
+}
+
+.header .container nav li a {
+    padding: 13px 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+    position: relative;
+    z-index: 2;
+    font-size: 14px;
+    display: block;
+
+
+}
+
+.header .container nav ul li a.active,
+.header .container nav ul li a:hover {
+    color: var(--first-color);
+    border-bottom: 1px solid var(--first-color);
+}
+
+.header .container nav .bag{
+    font-size: 21px;
+    color: var(--first-color);
+    border-left: 2px solid white;
+    margin-left: 8px;
+    padding: 4px;
+}
+
+.header .container .over{
+    background-color: maroon;
+    width: 100%;
+    height: 8px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+}
+/* end header */
+
+/* start product */
+.product{
+    position: relative;
+    top: 100px;
+}
+
+.product .container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 25px;
+}
+
+.product .container .card{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #e2e2e2;
+    width: 100%;
+    justify-content:space-between;
+}
+
+.product .container .card img{
+    width: 100px;
+    height: 100px;
+}
+
+.product .container .card p{
+    display: flex;
+    justify-content: center;
+    width: 220px;
+    text-align: center;
+}
+
+.product .container .card .text{
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    justify-content: space-between;
+}
+
+.product .container .card .text h3{
+    display: flex;
+    font-size: 13px;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.product .container .card .text a{
+    text-decoration: none;
+    color: maroon;
+    font-weight: bold;
+}
+
+
+.product .container .card p{
+    display: flex;
+    justify-content: center;
+    width: 220px;
+    text-align: center;
+
+}
+
+
+/* end product */
+
+/* start footer */
+.footer{
+    margin-top: auto;
+    width: 100%;
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -140px;
+}
+
+.footer .social{
+    padding: 5px;
+}
+
+.footer .social i{
+    margin-left: 20px;
+    color: var(--first-color);
+}
+
+.footer .text{
+    display: flex;
+    margin-left: 30px;
+}
+
+@media (max-width:767px){
+    .footer .text{
+        display: none;
+    }
+}
+/* end footer */
